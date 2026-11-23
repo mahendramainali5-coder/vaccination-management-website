@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/countrymarker.tsx","./src/data/databaserepository.ts","./src/types/database.ts","./src/utils/csv.ts","./src/utils/urlstate.ts","./src/views/dashboardview.tsx","./src/views/dataexplorerview.tsx","./src/views/databasedesignview.tsx"],"version":"5.9.3"}

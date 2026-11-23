@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 760" width="1160" height="760">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #1c3554; }
+      .entity-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 13.5px; font-weight: 700; fill: #12263f; }
+      .rel-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; font-weight: 700; fill: #3b2f06; }
+      .attr-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 500; fill: #261f38; }
+      .pk-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #1d1530; text-decoration: underline; }
+      .card-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 11.5px; font-weight: 700; fill: #1c3554; }
+      .leg-title { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 11.5px; font-weight: 700; fill: #1b3b2b; }
+      .leg-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; fill: #243b30; }
+      .note-txt { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; font-size: 9.5px; fill: #4a5d52; }
+    </style>
+    <filter id="softShadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#1c3554" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="0" y="0" width="1160" height="760" fill="#ffffff"/>
+  <rect x="12" y="12" width="1136" height="736" rx="10" fill="#fcfdff" stroke="#d0dae5" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <rect x="135" y="28" width="890" height="36" rx="18" fill="#dce7f3" stroke="#35567c" stroke-width="1.4"/>
+  <text x="580" y="51" text-anchor="middle" class="title">ER Diagram – Vaccination Management Database (SDG 3: Good Health and Well-Being)</text>
+  <!-- Attribute Connectors -->
+  <line x1="96" y1="152" x2="210" y2="210" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="88" y1="210" x2="210" y2="210" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="96" y1="268" x2="210" y2="210" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="342" y1="132" x2="575" y2="200" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="458" y1="104" x2="575" y2="200" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="582" y1="104" x2="575" y2="200" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="696" y1="104" x2="575" y2="200" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="776" y1="144" x2="575" y2="200" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1066" y1="152" x2="955" y2="210" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1072" y1="210" x2="955" y2="210" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1066" y1="268" x2="955" y2="210" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="112" y1="376" x2="278" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="104" y1="428" x2="278" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="110" y1="482" x2="278" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="126" y1="534" x2="278" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1050" y1="402" x2="892" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1058" y1="458" x2="892" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="1050" y1="514" x2="892" y2="458" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="330" y1="700" x2="580" y2="636" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="455" y1="706" x2="580" y2="636" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="582" y1="706" x2="580" y2="636" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="709" y1="706" x2="580" y2="636" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="834" y1="700" x2="580" y2="636" stroke="#5e6a78" stroke-width="1.3" stroke-linecap="round"/>
+  <!-- Relationship Connectors -->
+  <line x1="250" y1="233" x2="250" y2="308" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="250" y1="360" x2="305" y2="435" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="648" y1="210" x2="690" y2="210" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="802" y1="210" x2="845" y2="210" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="918" y1="233" x2="882" y2="312" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="858" y1="364" x2="818" y2="435" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="548" y1="233" x2="495" y2="286" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="478" y1="336" x2="412" y2="435" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="292" y1="233" x2="540" y2="386" stroke="#fcfdff" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="292" y1="233" x2="540" y2="386" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="646" y1="398" x2="725" y2="435" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="392" y1="481" x2="442" y2="526" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="468" y1="574" x2="528" y2="599" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="768" y1="481" x2="718" y2="526" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="692" y1="574" x2="632" y2="599" stroke="#37485c" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Entities -->
+  <rect x="177.0" y="187.0" width="146" height="46" rx="3" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.8" filter="url(#softShadow)"/>
+  <text x="250" y="215" text-anchor="middle" class="entity-txt">COUNTRY</text>
+  <rect x="502.0" y="187.0" width="146" height="46" rx="3" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.8" filter="url(#softShadow)"/>
+  <text x="575" y="215" text-anchor="middle" class="entity-txt">VACCINE</text>
+  <rect x="845.0" y="187.0" width="146" height="46" rx="3" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.8" filter="url(#softShadow)"/>
+  <text x="918" y="215" text-anchor="middle" class="entity-txt">DISEASE</text>
+  <rect x="248.0" y="435.0" width="224" height="46" rx="3" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.8" filter="url(#softShadow)"/>
+  <text x="360" y="463" text-anchor="middle" class="entity-txt">VACCINATION_RECORD</text>
+  <rect x="684.0" y="435.0" width="232" height="46" rx="3" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.8" filter="url(#softShadow)"/>
+  <text x="800" y="463" text-anchor="middle" class="entity-txt">DISEASE_CASE_REPORT</text>
+  <rect x="487.0" y="599.0" width="186" height="46" rx="3" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.8" filter="url(#softShadow)"/>
+  <text x="580" y="627" text-anchor="middle" class="entity-txt">DATA_SOURCE</text>
+  <!-- Relationships -->
+  <polygon points="250,308 302,334 250,360 198,334" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="250" y="338" text-anchor="middle" class="rel-txt">HAS</text>
+  <polygon points="488,282 554,310 488,338 422,310" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="488" y="308" text-anchor="middle" class="rel-txt">MEASURED</text>
+  <text x="488" y="321" text-anchor="middle" class="rel-txt">IN</text>
+  <polygon points="746,182 802,210 746,238 690,210" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="746" y="214" text-anchor="middle" class="rel-txt">PREVENTS</text>
+  <polygon points="870,310 936,338 870,366 804,338" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="870" y="336" text-anchor="middle" class="rel-txt">RECORDED</text>
+  <text x="870" y="349" text-anchor="middle" class="rel-txt">IN</text>
+  <polygon points="590,366 648,392 590,418 532,392" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="590" y="396" text-anchor="middle" class="rel-txt">REPORTS</text>
+  <polygon points="452,524 510,550 452,576 394,550" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="452" y="554" text-anchor="middle" class="rel-txt">SUPPORTS</text>
+  <polygon points="708,524 766,550 708,576 650,550" fill="#f9e89c" stroke="#8a721f" stroke-width="1.6" filter="url(#softShadow)"/>
+  <text x="708" y="554" text-anchor="middle" class="rel-txt">SUPPORTS</text>
+  <!-- Attributes -->
+  <ellipse cx="96" cy="152" rx="58" ry="19" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="96" y="156" text-anchor="middle" class="pk-txt">Country_ID</text>
+  <ellipse cx="88" cy="210" rx="62" ry="19" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="88" y="214" text-anchor="middle" class="attr-txt">Country_Code</text>
+  <ellipse cx="96" cy="268" rx="64" ry="19" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="96" y="272" text-anchor="middle" class="attr-txt">Country_Name</text>
+  <ellipse cx="342" cy="132" rx="54" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="342" y="136" text-anchor="middle" class="pk-txt">Vaccine_ID</text>
+  <ellipse cx="458" cy="104" rx="60" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="458" y="108" text-anchor="middle" class="attr-txt">Indicator_Code</text>
+  <ellipse cx="582" cy="104" rx="58" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="582" y="108" text-anchor="middle" class="attr-txt">Vaccine_Name</text>
+  <ellipse cx="696" cy="104" rx="52" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="696" y="108" text-anchor="middle" class="attr-txt">Dose_Series</text>
+  <ellipse cx="776" cy="144" rx="66" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="776" y="148" text-anchor="middle" class="attr-txt">Vaccine_Category</text>
+  <ellipse cx="1066" cy="152" rx="58" ry="19" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="1066" y="156" text-anchor="middle" class="pk-txt">Disease_ID</text>
+  <ellipse cx="1072" cy="210" rx="60" ry="19" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="1072" y="214" text-anchor="middle" class="attr-txt">Disease_Code</text>
+  <ellipse cx="1066" cy="268" rx="62" ry="19" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="1066" y="272" text-anchor="middle" class="attr-txt">Disease_Name</text>
+  <ellipse cx="112" cy="376" rx="56" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="112" y="380" text-anchor="middle" class="pk-txt">Record_ID</text>
+  <ellipse cx="104" cy="428" rx="56" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="104" y="432" text-anchor="middle" class="attr-txt">Report_Year</text>
+  <ellipse cx="110" cy="482" rx="70" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="110" y="486" text-anchor="middle" class="attr-txt">Coverage_Percent</text>
+  <ellipse cx="126" cy="534" rx="62" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="126" y="538" text-anchor="middle" class="attr-txt">Coverage_Date</text>
+  <ellipse cx="1050" cy="402" rx="70" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="1050" y="406" text-anchor="middle" class="pk-txt">Case_Report_ID</text>
+  <ellipse cx="1058" cy="458" rx="58" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="1058" y="462" text-anchor="middle" class="attr-txt">Report_Year</text>
+  <ellipse cx="1050" cy="514" rx="66" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="1050" y="518" text-anchor="middle" class="attr-txt">Reported_Cases</text>
+  <ellipse cx="330" cy="700" rx="56" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="330" y="704" text-anchor="middle" class="pk-txt">Source_ID</text>
+  <ellipse cx="455" cy="706" rx="58" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="455" y="710" text-anchor="middle" class="attr-txt">Source_Code</text>
+  <ellipse cx="582" cy="706" rx="58" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="582" y="710" text-anchor="middle" class="attr-txt">Source_Name</text>
+  <ellipse cx="709" cy="706" rx="58" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="709" y="710" text-anchor="middle" class="attr-txt">Organization</text>
+  <ellipse cx="834" cy="700" rx="56" ry="18" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.35"/>
+  <text x="834" y="704" text-anchor="middle" class="attr-txt">Source_URL</text>
+  <!-- Authoritative Min-Max Cardinalities -->
+  <text x="224" y="266" text-anchor="middle" class="card-txt">(0,N)</text>
+  <text x="260" y="412" text-anchor="middle" class="card-txt">(1,1)</text>
+  <text x="548" y="262" text-anchor="middle" class="card-txt">(0,N)</text>
+  <text x="452" y="416" text-anchor="middle" class="card-txt">(1,1)</text>
+  <text x="354" y="252" text-anchor="middle" class="card-txt">(0,N)</text>
+  <text x="704" y="408" text-anchor="middle" class="card-txt">(1,1)</text>
+  <text x="668" y="198" text-anchor="middle" class="card-txt">(1,N)</text>
+  <text x="824" y="198" text-anchor="middle" class="card-txt">(0,N)</text>
+  <text x="932" y="274" text-anchor="middle" class="card-txt">(0,N)</text>
+  <text x="862" y="412" text-anchor="middle" class="card-txt">(1,1)</text>
+  <text x="382" y="510" text-anchor="middle" class="card-txt">(1,1)</text>
+  <text x="464" y="594" text-anchor="middle" class="card-txt">(0,N)</text>
+  <text x="778" y="510" text-anchor="middle" class="card-txt">(1,1)</text>
+  <text x="696" y="594" text-anchor="middle" class="card-txt">(0,N)</text>
+  <!-- Legend -->
+  <rect x="30" y="592" width="222" height="138" rx="7" fill="#e7f2eb" stroke="#537a64" stroke-width="1.3"/>
+  <text x="44" y="612" class="leg-title">Legend (Chen Notation)</text>
+  <rect x="44" y="623" width="34" height="16" rx="2" fill="#b9d2eb" stroke="#2c4a70" stroke-width="1.3"/>
+  <text x="88" y="635" class="leg-txt">= Entity</text>
+  <ellipse cx="61" cy="656" rx="18" ry="8.5" fill="#e1dbf0" stroke="#5b4e7d" stroke-width="1.2"/>
+  <text x="88" y="660" class="leg-txt">= Attribute (PK underlined)</text>
+  <polygon points="61,671 79,681 61,691 43,681" fill="#f9e89c" stroke="#8a721f" stroke-width="1.2"/>
+  <text x="88" y="685" class="leg-txt">= Relationship</text>
+  <text x="44" y="707" class="leg-txt"><tspan font-weight="700" fill="#1c3554">(min, max)</tspan> = Participation beside entity</text>
+  <text x="44" y="721" class="note-txt">(Elmasri &amp; Navathe min-max convention)</text>
+  <text x="925" y="619" class="note-txt">MySQL mapping</text>
+  <text x="925" y="634" class="note-txt">PREVENTS → vaccine_disease</text>
+  <text x="925" y="649" class="note-txt">Bridge PK/FKs: vaccine_id, disease_id</text>
+  <text x="925" y="664" class="note-txt">Fact FKs: country, vaccine or disease, source</text>
+  <text x="925" y="679" class="note-txt">DATA_SOURCE also stores optional notes</text>
+  <text x="925" y="694" class="note-txt">Vaccine minimum is a project rule</text>
+  <text x="925" y="709" class="note-txt">MySQL permits a new vaccine before linking</text>
+</svg>

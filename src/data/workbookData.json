@@ -1,0 +1,4942 @@
+{
+  "metadata": {
+    "dataMode": "workbook",
+    "workbookFile": "Vaccination_Final_Data_3NF.xlsx",
+    "importedAt": "2026-11-23T07:02:21.850Z",
+    "validation": {
+      "sourceWorkbook": "Vaccination_Final_Data_3NF.xlsx",
+      "sheetCount": 8,
+      "sheetsLoaded": [
+        "country",
+        "vaccine_indicator",
+        "disease",
+        "data_source",
+        "vaccine_disease",
+        "vaccination_coverage",
+        "disease_case_count",
+        "covid_reporting_weeks"
+      ],
+      "rowCounts": {
+        "country": 5,
+        "vaccine_indicator": 5,
+        "disease": 7,
+        "data_source": 4,
+        "vaccine_disease": 7,
+        "vaccination_coverage": 225,
+        "disease_case_count": 325,
+        "covid_reporting_weeks": 25
+      },
+      "coverageStats": {
+        "total": 225,
+        "available": 212,
+        "unavailable": 13
+      },
+      "caseStats": {
+        "total": 325,
+        "available": 230,
+        "unavailable": 95,
+        "explicitZeros": 61
+      },
+      "foreignKeysValid": true,
+      "duplicateNaturalKeys": 0
+    }
+  },
+  "tables": {
+    "country": [
+      {
+        "country_id": 1,
+        "country_code": "KOR",
+        "country_name": "South Korea"
+      },
+      {
+        "country_id": 2,
+        "country_code": "JPN",
+        "country_name": "Japan"
+      },
+      {
+        "country_id": 3,
+        "country_code": "CHN",
+        "country_name": "China"
+      },
+      {
+        "country_id": 4,
+        "country_code": "IND",
+        "country_name": "India"
+      },
+      {
+        "country_id": 5,
+        "country_code": "NPL",
+        "country_name": "Nepal"
+      }
+    ],
+    "vaccine_indicator": [
+      {
+        "vaccine_id": 1,
+        "indicator_code": "HepB3",
+        "vaccine_name": "Hepatitis B",
+        "dose_series": "Third dose of Hepatitis B vaccine",
+        "vaccine_category": "ROUTINE"
+      },
+      {
+        "vaccine_id": 2,
+        "indicator_code": "MCV1",
+        "vaccine_name": "Measles",
+        "dose_series": "First dose of a measles-containing vaccine",
+        "vaccine_category": "ROUTINE"
+      },
+      {
+        "vaccine_id": 3,
+        "indicator_code": "DTP3",
+        "vaccine_name": "Diphtheria-Tetanus-Pertussis (DTP)",
+        "dose_series": "Third dose of a DTP-containing vaccine",
+        "vaccine_category": "ROUTINE"
+      },
+      {
+        "vaccine_id": 4,
+        "indicator_code": "IPV1",
+        "vaccine_name": "Polio",
+        "dose_series": "First dose of inactivated polio vaccine",
+        "vaccine_category": "ROUTINE"
+      },
+      {
+        "vaccine_id": 5,
+        "indicator_code": "COVID19_PRIMARY",
+        "vaccine_name": "COVID-19",
+        "dose_series": "Completed primary vaccination series",
+        "vaccine_category": "COVID19"
+      }
+    ],
+    "disease": [
+      {
+        "disease_id": 1,
+        "disease_code": "HEPB",
+        "disease_name": "Hepatitis B"
+      },
+      {
+        "disease_id": 2,
+        "disease_code": "MEASLES",
+        "disease_name": "Measles"
+      },
+      {
+        "disease_id": 3,
+        "disease_code": "DIPHTHERIA",
+        "disease_name": "Diphtheria"
+      },
+      {
+        "disease_id": 4,
+        "disease_code": "TETANUS",
+        "disease_name": "Tetanus"
+      },
+      {
+        "disease_id": 5,
+        "disease_code": "PERTUSSIS",
+        "disease_name": "Pertussis"
+      },
+      {
+        "disease_id": 6,
+        "disease_code": "POLIO",
+        "disease_name": "Poliomyelitis"
+      },
+      {
+        "disease_id": 7,
+        "disease_code": "COVID19",
+        "disease_name": "COVID-19"
+      }
+    ],
+    "data_source": [
+      {
+        "source_id": 1,
+        "source_code": "WHO_UNICEF_WUENIC_2025",
+        "source_name": "WHO/UNICEF Estimates of National Immunization Coverage (WUENIC 2025)",
+        "organization": "WHO / UNICEF",
+        "source_url": "https://data.unicef.org/resources/dataset/immunization/",
+        "notes": "Routine childhood coverage (HepB3, MCV1, DTP3, IPV1)"
+      },
+      {
+        "source_id": 2,
+        "source_code": "WHO_IMM_CASES",
+        "source_name": "WHO Immunization Surveillance Reported Cases",
+        "organization": "WHO",
+        "source_url": "https://immunizationdata.who.int/global?topic=Reported-cases-and-incidence",
+        "notes": "Annual reported vaccine-preventable disease cases"
+      },
+      {
+        "source_id": 3,
+        "source_code": "WHO_COVID19_DASHBOARD",
+        "source_name": "WHO COVID-19 Dashboard Vaccination and Case Data",
+        "organization": "WHO",
+        "source_url": "https://data.who.int/dashboards/covid19/data",
+        "notes": "COVID-19 completed primary series coverage and annual reported cases"
+      },
+      {
+        "source_id": 4,
+        "source_code": "OWID_COVID19_VAX",
+        "source_name": "Our World in Data COVID-19 Vaccination Archive",
+        "organization": "Our World in Data",
+        "source_url": "https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations",
+        "notes": "India August 2024 COVID-19 vaccination coverage figure"
+      }
+    ],
+    "vaccine_disease": [
+      {
+        "vaccine_id": 1,
+        "disease_id": 1
+      },
+      {
+        "vaccine_id": 2,
+        "disease_id": 2
+      },
+      {
+        "vaccine_id": 3,
+        "disease_id": 3
+      },
+      {
+        "vaccine_id": 3,
+        "disease_id": 4
+      },
+      {
+        "vaccine_id": 3,
+        "disease_id": 5
+      },
+      {
+        "vaccine_id": 4,
+        "disease_id": 6
+      },
+      {
+        "vaccine_id": 5,
+        "disease_id": 7
+      }
+    ],
+    "vaccination_coverage": [
+      {
+        "record_id": 1,
+        "country_id": 1,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2021,
+        "coverage_percent": 83,
+        "coverage_date": "2021-12-26"
+      },
+      {
+        "record_id": 2,
+        "country_id": 1,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2022,
+        "coverage_percent": 87,
+        "coverage_date": "2022-12-25"
+      },
+      {
+        "record_id": 3,
+        "country_id": 1,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2023,
+        "coverage_percent": 87,
+        "coverage_date": "2023-12-31"
+      },
+      {
+        "record_id": 4,
+        "country_id": 1,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2024,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 5,
+        "country_id": 1,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2025,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 6,
+        "country_id": 2,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2021,
+        "coverage_percent": 78,
+        "coverage_date": "2021-12-26"
+      },
+      {
+        "record_id": 7,
+        "country_id": 2,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2022,
+        "coverage_percent": 82,
+        "coverage_date": "2022-12-25"
+      },
+      {
+        "record_id": 8,
+        "country_id": 2,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2023,
+        "coverage_percent": 82,
+        "coverage_date": "2023-12-31"
+      },
+      {
+        "record_id": 9,
+        "country_id": 2,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2024,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 10,
+        "country_id": 2,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2025,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 11,
+        "country_id": 3,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2021,
+        "coverage_percent": 80,
+        "coverage_date": "2021-12-26"
+      },
+      {
+        "record_id": 12,
+        "country_id": 3,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2022,
+        "coverage_percent": 87,
+        "coverage_date": "2022-12-25"
+      },
+      {
+        "record_id": 13,
+        "country_id": 3,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2023,
+        "coverage_percent": 87,
+        "coverage_date": "2023-12-31"
+      },
+      {
+        "record_id": 14,
+        "country_id": 3,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2024,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 15,
+        "country_id": 3,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2025,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 16,
+        "country_id": 4,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2021,
+        "coverage_percent": 44,
+        "coverage_date": "2021-12-26"
+      },
+      {
+        "record_id": 17,
+        "country_id": 4,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2022,
+        "coverage_percent": 69,
+        "coverage_date": "2022-12-25"
+      },
+      {
+        "record_id": 18,
+        "country_id": 4,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2023,
+        "coverage_percent": 69,
+        "coverage_date": "2023-12-31"
+      },
+      {
+        "record_id": 19,
+        "country_id": 4,
+        "vaccine_id": 5,
+        "source_id": 4,
+        "report_year": 2024,
+        "coverage_percent": 67.18,
+        "coverage_date": "2024-08-12"
+      },
+      {
+        "record_id": 20,
+        "country_id": 4,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2025,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 21,
+        "country_id": 5,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2021,
+        "coverage_percent": 36,
+        "coverage_date": "2021-12-26"
+      },
+      {
+        "record_id": 22,
+        "country_id": 5,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2022,
+        "coverage_percent": 83,
+        "coverage_date": "2022-12-25"
+      },
+      {
+        "record_id": 23,
+        "country_id": 5,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2023,
+        "coverage_percent": 84,
+        "coverage_date": "2023-12-31"
+      },
+      {
+        "record_id": 24,
+        "country_id": 5,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2024,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 25,
+        "country_id": 5,
+        "vaccine_id": 5,
+        "source_id": 3,
+        "report_year": 2025,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 26,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 27,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 28,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 29,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 30,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 31,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 32,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 33,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 34,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 35,
+        "country_id": 1,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 36,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 37,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 38,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 39,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 40,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 92,
+        "coverage_date": null
+      },
+      {
+        "record_id": 41,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 42,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 43,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 44,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 45,
+        "country_id": 2,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 46,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 47,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 48,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 49,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 50,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 51,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 52,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 53,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 54,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 55,
+        "country_id": 3,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 56,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 88,
+        "coverage_date": null
+      },
+      {
+        "record_id": 57,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 89,
+        "coverage_date": null
+      },
+      {
+        "record_id": 58,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 59,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 60,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 85,
+        "coverage_date": null
+      },
+      {
+        "record_id": 61,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 85,
+        "coverage_date": null
+      },
+      {
+        "record_id": 62,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 63,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 64,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 94,
+        "coverage_date": null
+      },
+      {
+        "record_id": 65,
+        "country_id": 4,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 66,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 87,
+        "coverage_date": null
+      },
+      {
+        "record_id": 67,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 68,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 69,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 70,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 84,
+        "coverage_date": null
+      },
+      {
+        "record_id": 71,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 72,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 73,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 94,
+        "coverage_date": null
+      },
+      {
+        "record_id": 74,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 75,
+        "country_id": 5,
+        "vaccine_id": 1,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 76,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 77,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 78,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 79,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 80,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 81,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 82,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 83,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 84,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 85,
+        "country_id": 1,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 86,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 87,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 88,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 89,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 90,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 91,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 92,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 93,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 94,
+        "coverage_date": null
+      },
+      {
+        "record_id": 94,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 95,
+        "country_id": 2,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 92,
+        "coverage_date": null
+      },
+      {
+        "record_id": 96,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 97,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 98,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 99,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 100,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 101,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 102,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 103,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 104,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 105,
+        "country_id": 3,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 106,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 88,
+        "coverage_date": null
+      },
+      {
+        "record_id": 107,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 108,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 109,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 110,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 89,
+        "coverage_date": null
+      },
+      {
+        "record_id": 111,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 89,
+        "coverage_date": null
+      },
+      {
+        "record_id": 112,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 113,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 114,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 115,
+        "country_id": 4,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 116,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 83,
+        "coverage_date": null
+      },
+      {
+        "record_id": 117,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 118,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 119,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 92,
+        "coverage_date": null
+      },
+      {
+        "record_id": 120,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 87,
+        "coverage_date": null
+      },
+      {
+        "record_id": 121,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 122,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 123,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 124,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 125,
+        "country_id": 5,
+        "vaccine_id": 2,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 126,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 127,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 128,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 129,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 130,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 131,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 132,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 133,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 134,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 135,
+        "country_id": 1,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 136,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 137,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 138,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 139,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 140,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 141,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 142,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 143,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 144,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 145,
+        "country_id": 2,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 146,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 147,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 148,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 149,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 150,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 151,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 152,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 153,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 154,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 155,
+        "country_id": 3,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 156,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 88,
+        "coverage_date": null
+      },
+      {
+        "record_id": 157,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 89,
+        "coverage_date": null
+      },
+      {
+        "record_id": 158,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 159,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 160,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 85,
+        "coverage_date": null
+      },
+      {
+        "record_id": 161,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 85,
+        "coverage_date": null
+      },
+      {
+        "record_id": 162,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 163,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 164,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 94,
+        "coverage_date": null
+      },
+      {
+        "record_id": 165,
+        "country_id": 4,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 166,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 87,
+        "coverage_date": null
+      },
+      {
+        "record_id": 167,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 168,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 169,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 93,
+        "coverage_date": null
+      },
+      {
+        "record_id": 170,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 84,
+        "coverage_date": null
+      },
+      {
+        "record_id": 171,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 172,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 173,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 94,
+        "coverage_date": null
+      },
+      {
+        "record_id": 174,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 97,
+        "coverage_date": null
+      },
+      {
+        "record_id": 175,
+        "country_id": 5,
+        "vaccine_id": 3,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 176,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 177,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 178,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 179,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 180,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 181,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 182,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 183,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 184,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 185,
+        "country_id": 1,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 186,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 187,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 188,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 189,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 190,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 191,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 192,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 193,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 194,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 195,
+        "country_id": 2,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 196,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": null,
+        "coverage_date": null
+      },
+      {
+        "record_id": 197,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 198,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 199,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 200,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 201,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 202,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 99,
+        "coverage_date": null
+      },
+      {
+        "record_id": 203,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 204,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 205,
+        "country_id": 3,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 98,
+        "coverage_date": null
+      },
+      {
+        "record_id": 206,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 47,
+        "coverage_date": null
+      },
+      {
+        "record_id": 207,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 50,
+        "coverage_date": null
+      },
+      {
+        "record_id": 208,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 75,
+        "coverage_date": null
+      },
+      {
+        "record_id": 209,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 82,
+        "coverage_date": null
+      },
+      {
+        "record_id": 210,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 81,
+        "coverage_date": null
+      },
+      {
+        "record_id": 211,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 82,
+        "coverage_date": null
+      },
+      {
+        "record_id": 212,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 91,
+        "coverage_date": null
+      },
+      {
+        "record_id": 213,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 90,
+        "coverage_date": null
+      },
+      {
+        "record_id": 214,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 94,
+        "coverage_date": null
+      },
+      {
+        "record_id": 215,
+        "country_id": 4,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 95,
+        "coverage_date": null
+      },
+      {
+        "record_id": 216,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2016,
+        "coverage_percent": 77,
+        "coverage_date": null
+      },
+      {
+        "record_id": 217,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2017,
+        "coverage_percent": 16,
+        "coverage_date": null
+      },
+      {
+        "record_id": 218,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2018,
+        "coverage_percent": 16,
+        "coverage_date": null
+      },
+      {
+        "record_id": 219,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2019,
+        "coverage_percent": 80,
+        "coverage_date": null
+      },
+      {
+        "record_id": 220,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2020,
+        "coverage_percent": 73,
+        "coverage_date": null
+      },
+      {
+        "record_id": 221,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2021,
+        "coverage_percent": 86,
+        "coverage_date": null
+      },
+      {
+        "record_id": 222,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2022,
+        "coverage_percent": 84,
+        "coverage_date": null
+      },
+      {
+        "record_id": 223,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2023,
+        "coverage_percent": 88,
+        "coverage_date": null
+      },
+      {
+        "record_id": 224,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2024,
+        "coverage_percent": 96,
+        "coverage_date": null
+      },
+      {
+        "record_id": 225,
+        "country_id": 5,
+        "vaccine_id": 4,
+        "source_id": 1,
+        "report_year": 2025,
+        "coverage_percent": 96,
+        "coverage_date": null
+      }
+    ],
+    "disease_case_count": [
+      {
+        "case_report_id": 1,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 2,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 18
+      },
+      {
+        "case_report_id": 3,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 4,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 24
+      },
+      {
+        "case_report_id": 5,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 146
+      },
+      {
+        "case_report_id": 6,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 7,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 8,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 5
+      },
+      {
+        "case_report_id": 9,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 10,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 34
+      },
+      {
+        "case_report_id": 11,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 110
+      },
+      {
+        "case_report_id": 12,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 13,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 14,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 15
+      },
+      {
+        "case_report_id": 15,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 16,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 31
+      },
+      {
+        "case_report_id": 17,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 951
+      },
+      {
+        "case_report_id": 18,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 19,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 20,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 194
+      },
+      {
+        "case_report_id": 21,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 22,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 31
+      },
+      {
+        "case_report_id": 23,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 499
+      },
+      {
+        "case_report_id": 24,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 25,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 26,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 6
+      },
+      {
+        "case_report_id": 27,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 28,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 34
+      },
+      {
+        "case_report_id": 29,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 126
+      },
+      {
+        "case_report_id": 30,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 31,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 32,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 33,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 34,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 22
+      },
+      {
+        "case_report_id": 35,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 21
+      },
+      {
+        "case_report_id": 36,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 37,
+        "country_id": 1,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2021,
+        "reported_cases": 554812
+      },
+      {
+        "case_report_id": 38,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 39,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 40,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 41,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 23
+      },
+      {
+        "case_report_id": 42,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 31
+      },
+      {
+        "case_report_id": 43,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 44,
+        "country_id": 1,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2022,
+        "reported_cases": 28047388
+      },
+      {
+        "case_report_id": 45,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 46,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 7
+      },
+      {
+        "case_report_id": 47,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 48,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 24
+      },
+      {
+        "case_report_id": 49,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 292
+      },
+      {
+        "case_report_id": 50,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 51,
+        "country_id": 1,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2023,
+        "reported_cases": 5912818
+      },
+      {
+        "case_report_id": 52,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 53,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 49
+      },
+      {
+        "case_report_id": 54,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 55,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 29
+      },
+      {
+        "case_report_id": 56,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 48454
+      },
+      {
+        "case_report_id": 57,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 58,
+        "country_id": 1,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 59,
+        "country_id": 1,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 60,
+        "country_id": 1,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 78
+      },
+      {
+        "case_report_id": 61,
+        "country_id": 1,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 62,
+        "country_id": 1,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 25
+      },
+      {
+        "case_report_id": 63,
+        "country_id": 1,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 5500
+      },
+      {
+        "case_report_id": 64,
+        "country_id": 1,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 65,
+        "country_id": 1,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 66,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 67,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 165
+      },
+      {
+        "case_report_id": 68,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 69,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 129
+      },
+      {
+        "case_report_id": 70,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 3011
+      },
+      {
+        "case_report_id": 71,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 72,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 73,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 187
+      },
+      {
+        "case_report_id": 74,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 75,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 125
+      },
+      {
+        "case_report_id": 76,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 1661
+      },
+      {
+        "case_report_id": 77,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 78,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 79,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 279
+      },
+      {
+        "case_report_id": 80,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 81,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 133
+      },
+      {
+        "case_report_id": 82,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 12103
+      },
+      {
+        "case_report_id": 83,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 84,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 85,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 742
+      },
+      {
+        "case_report_id": 86,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 87,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 126
+      },
+      {
+        "case_report_id": 88,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 16845
+      },
+      {
+        "case_report_id": 89,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 90,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 91,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 12
+      },
+      {
+        "case_report_id": 92,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 93,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 105
+      },
+      {
+        "case_report_id": 94,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 2947
+      },
+      {
+        "case_report_id": 95,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 96,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 97,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 6
+      },
+      {
+        "case_report_id": 98,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 99,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 93
+      },
+      {
+        "case_report_id": 100,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 752
+      },
+      {
+        "case_report_id": 101,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 102,
+        "country_id": 2,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2021,
+        "reported_cases": 1514477
+      },
+      {
+        "case_report_id": 103,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 104,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 105,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 106,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 107,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 108,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 109,
+        "country_id": 2,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2022,
+        "reported_cases": 26534616
+      },
+      {
+        "case_report_id": 110,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 111,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 112,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 113,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 114,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 115,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 116,
+        "country_id": 2,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2023,
+        "reported_cases": 5537167
+      },
+      {
+        "case_report_id": 117,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 118,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 45
+      },
+      {
+        "case_report_id": 119,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 120,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 86
+      },
+      {
+        "case_report_id": 121,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 4095
+      },
+      {
+        "case_report_id": 122,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 123,
+        "country_id": 2,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 124,
+        "country_id": 2,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 125,
+        "country_id": 2,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 265
+      },
+      {
+        "case_report_id": 126,
+        "country_id": 2,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 127,
+        "country_id": 2,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 94
+      },
+      {
+        "case_report_id": 128,
+        "country_id": 2,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 89577
+      },
+      {
+        "case_report_id": 129,
+        "country_id": 2,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 130,
+        "country_id": 2,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 131,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 132,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 24820
+      },
+      {
+        "case_report_id": 133,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 134,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 135,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 5584
+      },
+      {
+        "case_report_id": 136,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 137,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 138,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 5941
+      },
+      {
+        "case_report_id": 139,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 140,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 141,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 10390
+      },
+      {
+        "case_report_id": 142,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 143,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 144,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 3940
+      },
+      {
+        "case_report_id": 145,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 146,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 147,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 22057
+      },
+      {
+        "case_report_id": 148,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 149,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 150,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 2974
+      },
+      {
+        "case_report_id": 151,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 152,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 153,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 30027
+      },
+      {
+        "case_report_id": 154,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 1
+      },
+      {
+        "case_report_id": 155,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 156,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 867
+      },
+      {
+        "case_report_id": 157,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 2
+      },
+      {
+        "case_report_id": 158,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 32
+      },
+      {
+        "case_report_id": 159,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 4475
+      },
+      {
+        "case_report_id": 160,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 161,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 162,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 554
+      },
+      {
+        "case_report_id": 163,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 164,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 23
+      },
+      {
+        "case_report_id": 165,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 9611
+      },
+      {
+        "case_report_id": 166,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 167,
+        "country_id": 3,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2021,
+        "reported_cases": 34534
+      },
+      {
+        "case_report_id": 168,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 169,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 552
+      },
+      {
+        "case_report_id": 170,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 171,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 18
+      },
+      {
+        "case_report_id": 172,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 38295
+      },
+      {
+        "case_report_id": 173,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 174,
+        "country_id": 3,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2022,
+        "reported_cases": 62314792
+      },
+      {
+        "case_report_id": 175,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 176,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 621
+      },
+      {
+        "case_report_id": 177,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 178,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 179,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 41124
+      },
+      {
+        "case_report_id": 180,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 181,
+        "country_id": 3,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2023,
+        "reported_cases": 36877077
+      },
+      {
+        "case_report_id": 182,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 183,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 1272
+      },
+      {
+        "case_report_id": 184,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 185,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 18
+      },
+      {
+        "case_report_id": 186,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 476690
+      },
+      {
+        "case_report_id": 187,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 188,
+        "country_id": 3,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2024,
+        "reported_cases": 58852
+      },
+      {
+        "case_report_id": 189,
+        "country_id": 3,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 190,
+        "country_id": 3,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 1770
+      },
+      {
+        "case_report_id": 191,
+        "country_id": 3,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 192,
+        "country_id": 3,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 10
+      },
+      {
+        "case_report_id": 193,
+        "country_id": 3,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 33364
+      },
+      {
+        "case_report_id": 194,
+        "country_id": 3,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 195,
+        "country_id": 3,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2025,
+        "reported_cases": 182
+      },
+      {
+        "case_report_id": 196,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 197,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 17250
+      },
+      {
+        "case_report_id": 198,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 3380
+      },
+      {
+        "case_report_id": 199,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 3781
+      },
+      {
+        "case_report_id": 200,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 37274
+      },
+      {
+        "case_report_id": 201,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 202,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 203,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 12032
+      },
+      {
+        "case_report_id": 204,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 5293
+      },
+      {
+        "case_report_id": 205,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 4946
+      },
+      {
+        "case_report_id": 206,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 23766
+      },
+      {
+        "case_report_id": 207,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 208,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 209,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 19474
+      },
+      {
+        "case_report_id": 210,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 8788
+      },
+      {
+        "case_report_id": 211,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 7000
+      },
+      {
+        "case_report_id": 212,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 13208
+      },
+      {
+        "case_report_id": 213,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 214,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 215,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 10430
+      },
+      {
+        "case_report_id": 216,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 9622
+      },
+      {
+        "case_report_id": 217,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 7071
+      },
+      {
+        "case_report_id": 218,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 11875
+      },
+      {
+        "case_report_id": 219,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 220,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 221,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 5604
+      },
+      {
+        "case_report_id": 222,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 3485
+      },
+      {
+        "case_report_id": 223,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 1361
+      },
+      {
+        "case_report_id": 224,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 12566
+      },
+      {
+        "case_report_id": 225,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 226,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 227,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 5700
+      },
+      {
+        "case_report_id": 228,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 1768
+      },
+      {
+        "case_report_id": 229,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 1240
+      },
+      {
+        "case_report_id": 230,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 593
+      },
+      {
+        "case_report_id": 231,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 232,
+        "country_id": 4,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2021,
+        "reported_cases": 24598952
+      },
+      {
+        "case_report_id": 233,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 234,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 40967
+      },
+      {
+        "case_report_id": 235,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 3286
+      },
+      {
+        "case_report_id": 236,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 65
+      },
+      {
+        "case_report_id": 237,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 4362
+      },
+      {
+        "case_report_id": 238,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 239,
+        "country_id": 4,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2022,
+        "reported_cases": 9890304
+      },
+      {
+        "case_report_id": 240,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 241,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 65150
+      },
+      {
+        "case_report_id": 242,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 3850
+      },
+      {
+        "case_report_id": 243,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 62
+      },
+      {
+        "case_report_id": 244,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 4949
+      },
+      {
+        "case_report_id": 245,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 246,
+        "country_id": 4,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2023,
+        "reported_cases": 336066
+      },
+      {
+        "case_report_id": 247,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 248,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 18530
+      },
+      {
+        "case_report_id": 249,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 5634
+      },
+      {
+        "case_report_id": 250,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 70
+      },
+      {
+        "case_report_id": 251,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 2395
+      },
+      {
+        "case_report_id": 252,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 253,
+        "country_id": 4,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2024,
+        "reported_cases": 31377
+      },
+      {
+        "case_report_id": 254,
+        "country_id": 4,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 255,
+        "country_id": 4,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 17995
+      },
+      {
+        "case_report_id": 256,
+        "country_id": 4,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 3249
+      },
+      {
+        "case_report_id": 257,
+        "country_id": 4,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 38
+      },
+      {
+        "case_report_id": 258,
+        "country_id": 4,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 2149
+      },
+      {
+        "case_report_id": 259,
+        "country_id": 4,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 260,
+        "country_id": 4,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2025,
+        "reported_cases": 11657
+      },
+      {
+        "case_report_id": 261,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 262,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 1269
+      },
+      {
+        "case_report_id": 263,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 140
+      },
+      {
+        "case_report_id": 264,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 766
+      },
+      {
+        "case_report_id": 265,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 4890
+      },
+      {
+        "case_report_id": 266,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2016,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 267,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 268,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 99
+      },
+      {
+        "case_report_id": 269,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 728
+      },
+      {
+        "case_report_id": 270,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 880
+      },
+      {
+        "case_report_id": 271,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 9092
+      },
+      {
+        "case_report_id": 272,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2017,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 273,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 274,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 260
+      },
+      {
+        "case_report_id": 275,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 232
+      },
+      {
+        "case_report_id": 276,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 485
+      },
+      {
+        "case_report_id": 277,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 4153
+      },
+      {
+        "case_report_id": 278,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2018,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 279,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 280,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 430
+      },
+      {
+        "case_report_id": 281,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 282,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 546
+      },
+      {
+        "case_report_id": 283,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 284,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2019,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 285,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 286,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 388
+      },
+      {
+        "case_report_id": 287,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 288,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 336
+      },
+      {
+        "case_report_id": 289,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 290,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2020,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 291,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 292,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 143
+      },
+      {
+        "case_report_id": 293,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 294,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 927
+      },
+      {
+        "case_report_id": 295,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 296,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2021,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 297,
+        "country_id": 5,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2021,
+        "reported_cases": 569090
+      },
+      {
+        "case_report_id": 298,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 299,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 130
+      },
+      {
+        "case_report_id": 300,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 95
+      },
+      {
+        "case_report_id": 301,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 768
+      },
+      {
+        "case_report_id": 302,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": 4828
+      },
+      {
+        "case_report_id": 303,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2022,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 304,
+        "country_id": 5,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2022,
+        "reported_cases": 173695
+      },
+      {
+        "case_report_id": 305,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 306,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 963
+      },
+      {
+        "case_report_id": 307,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 27
+      },
+      {
+        "case_report_id": 308,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 0
+      },
+      {
+        "case_report_id": 309,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": 4206
+      },
+      {
+        "case_report_id": 310,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2023,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 311,
+        "country_id": 5,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2023,
+        "reported_cases": 2484
+      },
+      {
+        "case_report_id": 312,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 313,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 113
+      },
+      {
+        "case_report_id": 314,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 70
+      },
+      {
+        "case_report_id": 315,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 316,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": 2677
+      },
+      {
+        "case_report_id": 317,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 318,
+        "country_id": 5,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2024,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 319,
+        "country_id": 5,
+        "disease_id": 1,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 320,
+        "country_id": 5,
+        "disease_id": 2,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 24
+      },
+      {
+        "case_report_id": 321,
+        "country_id": 5,
+        "disease_id": 3,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 322,
+        "country_id": 5,
+        "disease_id": 4,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": 3
+      },
+      {
+        "case_report_id": 323,
+        "country_id": 5,
+        "disease_id": 5,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 324,
+        "country_id": 5,
+        "disease_id": 6,
+        "source_id": 2,
+        "report_year": 2025,
+        "reported_cases": null
+      },
+      {
+        "case_report_id": 325,
+        "country_id": 5,
+        "disease_id": 7,
+        "source_id": 3,
+        "report_year": 2025,
+        "reported_cases": 518
+      }
+    ],
+    "covid_reporting_weeks": [
+      {
+        "case_report_id": 37,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 44,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 51,
+        "weeks_reported": 49
+      },
+      {
+        "case_report_id": 58,
+        "weeks_reported": null
+      },
+      {
+        "case_report_id": 65,
+        "weeks_reported": null
+      },
+      {
+        "case_report_id": 102,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 109,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 116,
+        "weeks_reported": 49
+      },
+      {
+        "case_report_id": 123,
+        "weeks_reported": null
+      },
+      {
+        "case_report_id": 130,
+        "weeks_reported": null
+      },
+      {
+        "case_report_id": 167,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 174,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 181,
+        "weeks_reported": 53
+      },
+      {
+        "case_report_id": 188,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 195,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 232,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 239,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 246,
+        "weeks_reported": 53
+      },
+      {
+        "case_report_id": 253,
+        "weeks_reported": 50
+      },
+      {
+        "case_report_id": 260,
+        "weeks_reported": 46
+      },
+      {
+        "case_report_id": 297,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 304,
+        "weeks_reported": 52
+      },
+      {
+        "case_report_id": 311,
+        "weeks_reported": 49
+      },
+      {
+        "case_report_id": 318,
+        "weeks_reported": null
+      },
+      {
+        "case_report_id": 325,
+        "weeks_reported": 48
+      }
+    ]
+  }
+}
